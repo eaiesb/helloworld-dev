@@ -12,7 +12,7 @@ disableConcurrentBuilds()
 stages {
 stage("Build Mule Source Code") {
 steps {
-           slackSend (color: "#f1502f", message: "Git URL is : ${env.GIT_URL}")
+          slackSend (color: "#f1502f", message: "Git URL is : ${env.GIT_URL}")
           slackSend (color: "add8e6", message: 'helloworld-dev Deployment Started')
           buildsrc() 
           archiveArtifacts '**/*'
