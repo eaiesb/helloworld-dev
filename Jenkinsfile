@@ -28,11 +28,11 @@ stage('Upload Files To Artifactory') {
   "files": [
     {
       "pattern": "**/*.zip",
-      "target": "generic-local/helloworld-dev1/helloworld-dev1.zip"
+      "target": "generic-local/helloworld-dev/helloworld-dev.zip"
     }
  ]
 }"""                 
-              def buildInfo1 = server.upload spec: uploadSpec
+               def buildInfo1 = server.upload spec: uploadSpec
 
             }
     }
