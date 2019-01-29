@@ -52,7 +52,7 @@ stage('Upload Files To Artifactory') {
            slackSend (color: "#FF0001",message: 'helloworld-dev Deployment Failed')
         }
       success {
-         slackSend (color: "0000ff", message: 'helloworld-dev Build sucess')
+          slackSend (color: "0000ff", message: 'helloworld-dev Build sucess')
           slackSend (color: "#FFA500",message: 'helloworld-dev Artifacts Uploaded Sucessfully')
           build job: 'helloworld-qa'
           emailext attachLog: true, mimeType: 'text/html', body: '''The jenkins build details are as follows:<br> <br>
