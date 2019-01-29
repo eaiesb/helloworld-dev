@@ -32,7 +32,7 @@ stage('Upload Files To Artifactory') {
     }
  ]
 }"""                 
-               def buildInfo1 = server.upload spec: uploadSpec
+              def buildInfo1 = server.upload spec: uploadSpec
 
             }
     }
